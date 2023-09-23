@@ -1,13 +1,14 @@
 const express = require("express");
 const app = express();
-const cors = require('cors')
+const cors = require('cors');
+const dotenv=require("dotenv");
 const bodyParser = require("body-parser");
 const PORT = process.env.PORT || 8000;
 const dbConnection = require("./db/dbConnection");
 const productRoutes =require('./routes/productRoutes') 
 const userRoutes = require('./routes/userRoutes');
 const cookieParser = require("cookie-parser");
-
+dotenv.config();
 // middleware
 dbConnection();
 app.use(cors())
