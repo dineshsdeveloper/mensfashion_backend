@@ -11,7 +11,7 @@ const cookieParser = require("cookie-parser");
 dotenv.config();
 // middleware
 dbConnection();
-app.use(cors())
+app.use(cors({origin:["https://mensfashionstore.netlify.app"]}))
 app.use(cookieParser())
 app.use(bodyParser.urlencoded({extended:false}))
 app.use(express.json())
